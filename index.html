@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sociedade do Café - Estatuto Oficial</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Cinzel, Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            roast: {
+              950: '#1a0f0b',
+              900: '#2b1810',
+              800: '#3d2314',
+              700: '#54321c',
+              600: '#754627',
+              500: '#965a32',
+              100: '#f8f4ee',
+              50: '#fcfbf8',
+            },
+            parchment: {
+              DEFAULT: '#f4ede2',
+              light: '#fbf7f0',
+              dark: '#e8dcce',
+              border: '#d3beaa'
+            },
+            gold: {
+              DEFAULT: '#c69537',
+              light: '#dfb75f',
+              dark: '#9d7423'
+            }
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #1a0f0b;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(150, 90, 50, 0.28), transparent 70%),
+        radial-gradient(circle at 10% 90%, rgba(84, 50, 28, 0.38), transparent 60%);
+      min-height: 100vh;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    @keyframes steam-rise {
+      0% {
+        transform: translateY(0) scaleX(1);
+        opacity: 0;
+      }
+      25% {
+        opacity: 0.7;
+      }
+      50% {
+        transform: translateY(-16px) scaleX(1.3) translateX(3px);
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(-34px) scaleX(1.8) translateX(-4px);
+        opacity: 0;
+      }
+    }
+
+    .steam-1 {
+      animation: steam-rise 2.8s infinite ease-out;
+    }
+    .steam-2 {
+      animation: steam-rise 3.2s infinite ease-out 0.8s;
+    }
+    .steam-3 {
+      animation: steam-rise 2.6s infinite ease-out 1.5s;
+    }
+
+    .parchment-card {
+      background: #fbf7f0;
+      box-shadow: 
+        0 25px 50px -12px rgba(0, 0, 0, 0.55),
+        0 0 0 1px #d8c2ad,
+        inset 0 0 60px rgba(117, 70, 39, 0.08);
+      position: relative;
+    }
+
+    .parchment-card::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 1px dashed #cfb9a3;
+      border-radius: inherit;
+      pointer-events: none;
+    }
+
+    .official-stamp {
+      border: 3px double #965a32;
+      color: #965a32;
+      transform: rotate(-5deg);
+    }
+  </style>
+</head>
+<body class="text-roast-900 antialiased p-3 sm:p-6 md:p-10 flex items-center justify-center">
+
+  <main class="w-full max-w-3xl parchment-card rounded-2xl p-6 sm:p-10 md:p-12 relative overflow-hidden transition-all duration-300">
+    
+    <!-- Top Corner Accents -->
+    <div class="absolute top-3 left-3 text-roast-600 opacity-30 select-none text-xl sm:text-2xl" aria-hidden="true">☕</div>
+    <div class="absolute top-3 right-3 text-roast-600 opacity-30 select-none text-xl sm:text-2xl" aria-hidden="true">☕</div>
+
+    <!-- Header Section with Animated Coffee Cup and Title -->
+    <header class="text-center relative pb-6 border-b border-roast-600/20">
+      
+      <!-- Animated Coffee Cup SVG -->
+      <div class="relative inline-block mx-auto mb-3">
+        <svg class="w-16 h-16 sm:w-20 sm:h-20 text-roast-700" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="steam-1" d="M22 20C22 14 26 13 26 8" stroke="#965a32" stroke-width="2.5" stroke-linecap="round"/>
+          <path class="steam-2" d="M32 21C32 15 36 12 36 6" stroke="#965a32" stroke-width="2.5" stroke-linecap="round"/>
+          <path class="steam-3" d="M42 20C42 14 38 13 38 7" stroke="#965a32" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M14 26H50V41C50 47.6274 44.6274 53 38 53H26C19.3726 53 14 47.6274 14 41V26Z" fill="#54321c"/>
+          <path d="M16 29C20 31 44 31 48 29" stroke="#dfb75f" stroke-width="2" stroke-linecap="round"/>
+          <path d="M50 31H54C57.3137 31 60 33.6863 60 37C60 40.3137 57.3137 43 54 43H48" stroke="#54321c" stroke-width="4.5" stroke-linecap="round"/>
+          <rect x="8" y="55" width="48" height="4" rx="2" fill="#3d2314"/>
+        </svg>
+      </div>
+
+      <div class="inline-block px-3 py-1 mb-2 text-xs uppercase tracking-widest text-roast-600 font-semibold bg-roast-600/10 rounded-full border border-roast-600/20">
+        Estatuto Oficial de Convivência
+      </div>
+
+      <h1 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-extrabold text-roast-900 tracking-tight leading-none mb-3">
+        SOCIEDADE DO CAFÉ
+      </h1>
+
+      <p class="font-serif italic text-lg sm:text-xl text-roast-700 font-semibold tracking-wide">
+        “Unidos pela cafeína, sustentados pelo próprio pó.”
+      </p>
+
+      <!-- Ornamental Divider -->
+      <div class="flex items-center justify-center gap-2 mt-4 text-roast-600/60">
+        <span class="w-12 h-[1px] bg-roast-600/40"></span>
+        <span class="text-xs">◆ ☕ ◆</span>
+        <span class="w-12 h-[1px] bg-roast-600/40"></span>
+      </div>
+    </header>
+
+    <!-- WhatsApp Invitation Section -->
+    <div class="pt-8 pb-4">
+      <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-emerald-800 to-emerald-950 p-5 sm:p-6 text-white shadow-lg border border-emerald-700/60">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 relative z-10 text-center sm:text-left">
+          <div class="flex items-center gap-3.5">
+            <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 flex-shrink-0">
+              <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.68C7.02 10.88 7.9 12.04 8.02 12.2C8.14 12.37 9.73 14.82 12.18 15.87C12.76 16.12 13.22 16.27 13.57 16.39C14.16 16.57 14.7 16.55 15.13 16.48C15.61 16.41 16.61 15.88 16.82 15.3C17.02 14.71 17.02 14.21 16.96 14.11C16.9 14.01 16.74 13.95 16.5 13.83C16.25 13.71 15.03 13.11 14.81 13.03C14.58 12.95 14.42 12.9 14.25 13.15C14.09 13.39 13.62 13.95 13.48 14.11C13.34 14.28 13.19 14.29 12.95 14.18C12.71 14.06 11.93 13.8 11.01 12.98C10.29 12.34 9.8 11.55 9.66 11.31C9.52 11.07 9.65 10.93 9.77 10.82C9.88 10.71 10.02 10.53 10.15 10.39C10.27 10.24 10.31 10.14 10.39 9.98C10.47 9.81 10.43 9.67 10.37 9.55C10.31 9.42 9.84 8.27 9.65 7.79C9.46 7.33 9.27 7.39 9.12 7.38C8.98 7.38 8.81 7.33 8.53 7.33Z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-cinzel font-bold text-base sm:text-lg text-white">Grupo Oficial no WhatsApp</h3>
+              <p class="text-xs sm:text-sm text-emerald-200/90 font-medium">
+                Participe da nossa congregação cafeeira e acompanhe os avisos da garrafa.
+              </p>
+            </div>
+          </div>
+
+          <a 
+            href="https://chat.whatsapp.com/EHBoSVrtihZBnLfi64lLll" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-roast-950 font-bold text-sm tracking-wide shadow-md transition-all whitespace-nowrap"
+          >
+            <span>Entrar no Grupo</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Articles Section -->
+    <div class="py-4 space-y-6 text-roast-900">
+
+      <!-- Artigo 1º -->
+      <section class="bg-white/60 backdrop-blur-sm p-5 sm:p-6 rounded-xl border border-parchment-border/70 shadow-sm transition hover:shadow-md">
+        <div class="flex items-start gap-3.5">
+          <span class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-roast-800 text-gold font-cinzel font-bold text-sm">
+            I
+          </span>
+          <div>
+            <h2 class="font-cinzel text-base sm:text-lg font-bold text-roast-900">
+              Artigo 1º <span class="text-roast-600 font-sans font-medium text-sm sm:text-base">(Da Missão Sagrada):</span>
+            </h2>
+            <p class="mt-2 text-sm sm:text-base leading-relaxed text-roast-800 font-medium">
+              Fica fundada esta nobre entidade com o objetivo de compartilhar os custos da nossa sanidade mental. Cafeína dá em árvore, mas não cai moída no copo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Artigo 2º -->
+      <section class="bg-white/60 backdrop-blur-sm p-5 sm:p-6 rounded-xl border border-parchment-border/70 shadow-sm transition hover:shadow-md">
+        <div class="flex items-start gap-3.5">
+          <span class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-roast-800 text-gold font-cinzel font-bold text-sm">
+            II
+          </span>
+          <div class="w-full">
+            <h2 class="font-cinzel text-base sm:text-lg font-bold text-roast-900">
+              Artigo 2º <span class="text-roast-600 font-sans font-medium text-sm sm:text-base">(Do Tributo Obrigatório em Espécie):</span>
+            </h2>
+            <p class="mt-2 text-sm sm:text-base leading-relaxed text-roast-800 font-medium">
+              Para manter a cidadania ativa nesta Sociedade, cada membro deverá comparecer com o seu kit de sobrevivência coletiva:
+            </p>
+
+            <!-- Itens Requeridos -->
+            <div class="mt-4 space-y-3">
+              
+              <!-- Pó de Café -->
+              <div class="flex items-start gap-3.5 p-3.5 rounded-lg bg-parchment-light border border-roast-600/15">
+                <span class="text-2xl select-none" aria-hidden="true">☕</span>
+                <div>
+                  <h3 class="font-bold text-roast-900 text-sm sm:text-base">1 pacote de pó de café:</h3>
+                  <p class="text-xs sm:text-sm text-roast-700 mt-0.5 leading-relaxed">
+                    Marcas devidamente homologadas pelo Supremo Tribunal do Grão: 
+                    <strong class="text-roast-950 font-bold bg-amber-100/90 px-1 py-0.5 rounded border border-amber-300">Melitta</strong> ou 
+                    <strong class="text-roast-950 font-bold bg-amber-100/90 px-1 py-0.5 rounded border border-amber-300">3 Corações</strong> 
+                    <em>(marcas misteriosas serão submetidas à CPI do Paladar)</em>.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Filtro de Papel Grande -->
+              <div class="flex items-start gap-3.5 p-3.5 rounded-lg bg-parchment-light border border-roast-600/15">
+                <span class="text-2xl select-none" aria-hidden="true">📄</span>
+                <div>
+                  <h3 class="font-bold text-roast-900 text-sm sm:text-base">1 caixa/pacote de filtro de papel GRANDE:</h3>
+                  <p class="text-xs sm:text-sm text-roast-700 mt-0.5 leading-relaxed">
+                    Marcas <strong class="text-roast-950 font-bold bg-amber-100/90 px-1 py-0.5 rounded border border-amber-300">Melitta</strong> ou 
+                    <strong class="text-roast-950 font-bold bg-amber-100/90 px-1 py-0.5 rounded border border-amber-300">3 Corações</strong> 
+                    <em>(aqui não cabe filtro econômico que transborda pó na garrafa)</em>.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item para Adoçar -->
+              <div class="flex items-start gap-3.5 p-3.5 rounded-lg bg-parchment-light border border-roast-600/15">
+                <span class="text-2xl select-none" aria-hidden="true">🍬</span>
+                <div>
+                  <h3 class="font-bold text-roast-900 text-sm sm:text-base">1 item para adoçar:</h3>
+                  <p class="text-xs sm:text-sm text-roast-700 mt-0.5 leading-relaxed">
+                    <strong class="text-roast-950 font-semibold">1 pacote pequeno de açúcar</strong> OU <strong class="text-roast-950 font-semibold">1 frasco de adoçante</strong>.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Rodapé Oficial -->
+    <footer class="pt-6 mt-4 border-t border-roast-600/20 text-center relative">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        
+        <div class="text-center sm:text-left">
+          <p class="font-serif italic font-bold text-base sm:text-lg text-roast-800">
+            “Unidos pela cafeína, sustentados pelo próprio pó.” ☕✨
+          </p>
+          <p class="text-xs text-roast-600 mt-0.5 font-medium">
+            Estatuto promulgado por aclamação unânime dos sonolentos.
+          </p>
+        </div>
+
+        <!-- Carimbo Oficial -->
+        <div class="official-stamp px-3.5 py-1.5 rounded text-center uppercase tracking-widest font-cinzel text-[10px] sm:text-xs font-black select-none">
+          <div>SOCIEDADE DO CAFÉ</div>
+          <div class="text-[8px] font-sans font-bold text-roast-700">OFICIAL • HOMOLOGADO</div>
+        </div>
+
+      </div>
+    </footer>
+
+  </main>
+
+</body>
+</html>
